@@ -24,4 +24,4 @@ pythonpath = [
 ]
 
 [build-system]
-requires = ["setuptools ~= 58.0",]
+requires = ["setuptools ~= 58.0", wheel, twine]
