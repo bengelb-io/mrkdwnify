@@ -6,7 +6,8 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = ["License :: OSI Approved :: MIT License"]
-dynamic = ["version", "description"]
+description = "mrkdwnify is a python adaptation of the javascript html-to-mrkdwn library."
+version = "0.1"
 
 dependencies = [
     "markdownify==0.4.7",
@@ -25,3 +26,12 @@ pythonpath = [
 
 [build-system]
 requires = ["setuptools", "wheel", "twine"]
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mrkdwn*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "mrkdwn.__version__"}
+description = {attr = "mrkdwn.__description__"}
