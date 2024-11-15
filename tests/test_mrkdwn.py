@@ -1,4 +1,4 @@
-from mrkdwn import mrkdwnify
+from mrkdwnify import mrkdwnify
 import os
 from os import path, listdir, getcwd
 
