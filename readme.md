@@ -1,26 +1,27 @@
 # mrkdwnify
 
-mrkdwnify is an adaptation of the javascript html-to-mrkdwn library, that uses the markdownify (as html-to-mrkdwn uses TurnDown) as its base.
+mrkdwnify is an adaptation of the javascript html-to-mrkdwn library.
 There are some small implementation differences between html-to-mrkdwn and mrkdwnify.
 
+If you don't know what mrkdwn is, it's a subset of Markdown made by Slack, to enable users to craft nicely formatted messages on their platform.
+Do not use this if you're looking for a regular html to markdown parser. Try: https://github.com/matthewwithanm/python-markdownify
+
+mrkdwnify itself is derived directly from the python-markdownify library.
+It overrides several methods from the original library and passes option presets to make outputs compatible with the mrkdwn spec.
+
 1. Consecutive <a> and <img> are not treated as inline elements.
-2. For "checked" attributes in input tags you need to provide a "true" value:
+2. For "checked" attributes in input tags you need to provide a "true" value
 Ex:
-```html
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" checked="true">item</li>
-``` 
-To:
- ☑︎ item
+```<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" checked="true">item</li>``` => ☑︎ item
 
 Other than that the implementation should be the same.
 
-Other important things to note:
-- ```<table>``` elements will not be rendered at all unless you pass `render_tables=True` as a keyword argument.
-- Mrkdwn is a subset of Markdown so there aren't alternative options
+Important things to note:
+- ```<table>``` elements will not be rendered at all (not even their content) unless you pass `render_tables=True` as a keyword argument.
+- Mrkdwn is a subset of Markdown used 
 
 # Installation 
-### (till I can figure out PyPi)
-
+Until I can figure out PyPi:
 ```bash
 pip install git+https://github.com/bengelb-io/py-html-to-mrkdwn
 ```
