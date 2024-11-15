@@ -1,28 +1,44 @@
 [project]
 name = "mrkdwnify"
+version = "0.1.0"  # Using semantic versioning format
 authors = [
     {name = "Benjamin Gelb", email = "benjamin.gelb.io@gmail.com"},
 ]
+description = "mrkdwnify is a python adaptation of the javascript html-to-mrkdwn library."
 readme = "README.md"
 requires-python = ">=3.7"
-classifiers = ["License :: OSI Approved :: MIT License"]
-description = "mrkdwnify is a python adaptation of the javascript html-to-mrkdwn library."
-version = "0.1"
-
-dependencies = [
-    "markdownify==0.13.1",
+license = {text = "MIT"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Text Processing :: Markup",
 ]
+keywords = ["markdown", "converter", "html", "mrkdwn"]
+dependencies = [
+    "markdownify>=0.13.1",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/username/mrkdwnify"
+"Bug Tracker" = "https://github.com/username/mrkdwnify/issues"
 
 [project.optional-dependencies]
 test = [
-    "pytest==8.3.3",
+    "pytest>=8.3.3",
 ]
-
 
 [tool.pytest.ini_options]
 pythonpath = [
-  "."
+    "."
 ]
 
 [build-system]
-requires = ["setuptools", "wheel", "twine"]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
