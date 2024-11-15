@@ -4,9 +4,9 @@ from typing import Optional
 from string import digits
 
 
-class Options:
+class MrkdwnOptions:
     convert = [
-        "a", "blockquote", "pre", "code", "h", *[f"h{i}" for i in range(1, 7)],
+        "a", "blockquote", "pre", "code", *[f"h{i}" for i in range(1, 7)],
         "del", "em", "img", "i", "ol", "ul", "li", "s", "strike", "b",
         "strong", "br", "table"
     ]
@@ -78,7 +78,7 @@ class MrkdwnConverter(MarkdownConverter):
         return '%s %s\n\n' % (hashes, text)
 
     def convert_table(self, el, text, convert_as_inline):
-        if self.options[""]:
+        if self.options["render_tables"]:
             return super().convert_table(el, text, convert_as_inline)
         return ""
 
@@ -125,4 +125,4 @@ class MrkdwnConverter(MarkdownConverter):
 
 
 def mrkdwnify(html: str, **options):
-    return MrkdwnConverter(**_todict(Options), **options).convert(html)
+    return MrkdwnConverter(**_todict(MrkdwnOptions), **options).convert(html)
