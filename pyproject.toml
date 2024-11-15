@@ -10,7 +10,7 @@ description = "mrkdwnify is a python adaptation of the javascript html-to-mrkdwn
 version = "0.1"
 
 dependencies = [
-    "markdownify==0.4.7",
+    "markdownify==0.13.1",
 ]
 
 [project.optional-dependencies]
