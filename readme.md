@@ -29,7 +29,7 @@ pip install git+https://github.com/bengelb-io/py-html-to-mrkdwn
 # Use
 
 ```python
-from mrkdwn import mrkdwnify
+from mrkdwnify import mrkdwnify
 
 html = "<h1>Hello this is a mrkdwn header!</h1>"
 mrkdwn = mrkdwnify(html) # *Hello this is a mrkdwn header!*

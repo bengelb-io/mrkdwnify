@@ -1,6 +1,6 @@
 from mrkdwnify import mrkdwnify
 import os
-from os import path, listdir, getcwd
+from os import path, getcwd
 
 delimiter = "===="
 
