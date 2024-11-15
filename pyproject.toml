@@ -26,12 +26,3 @@ pythonpath = [
 
 [build-system]
 requires = ["setuptools", "wheel", "twine"]
-
-
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["mrkdwn*"]
-
-[tool.setuptools.dynamic]
-version = {attr = "mrkdwn.__version__"}
-description = {attr = "mrkdwn.__description__"}
