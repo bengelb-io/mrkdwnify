@@ -3,6 +3,8 @@ from bs4 import Tag
 from typing import Optional
 from string import digits
 
+__version__ = "0.1.1"
+
 
 class MrkdwnOptions:
     convert = [

@@ -1,13 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "mrkdwnify"
-version = "0.1.0"  # Using semantic versioning format
+dynamic = ["version"]
 authors = [
     {name = "Benjamin Gelb", email = "benjamin.gelb.io@gmail.com"},
 ]
-description = "mrkdwnify is a python adaptation of the javascript html-to-mrkdwn library."
+license = {file = "LICENSE"}
+description = "Python adaptation of the javascript html-to-mrkdwn library."
 readme = "README.md"
-requires-python = ">=3.7"
-license = {text = "MIT"}
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
@@ -20,10 +23,11 @@ classifiers = [
     "Intended Audience :: Developers",
     "Topic :: Text Processing :: Markup",
 ]
-keywords = ["markdown", "converter", "html", "mrkdwn"]
+keywords = ["markdown", "converter", "html", "mrkdwn", "markdownify", "html-to-mrkdwn", "python"]
 dependencies = [
     "markdownify>=0.13.1",
 ]
+requires-python = ">=3.7"
 
 [project.urls]
 "Homepage" = "https://github.com/bengelb-io/mrkdwnify"
@@ -38,7 +42,3 @@ test = [
 pythonpath = [
     "."
 ]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
