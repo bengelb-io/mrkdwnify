@@ -36,4 +36,4 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.github_token }}
       run: |
-        python -m twine upload dist/*
+        python -m twine upload --verbose dist/*
