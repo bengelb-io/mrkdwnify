@@ -1,6 +1,7 @@
 name: Publish to PyPI
 
 on:
+  workflow_dispatch
   release:
     types: [created]
 
@@ -25,7 +26,8 @@ jobs:
     
     - name: Publish to PyPI
       env:
-        TWINE_USERNAME: __token__
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.github_token }}
       run: |
         python -m twine upload dist/*
