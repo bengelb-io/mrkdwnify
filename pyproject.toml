@@ -42,3 +42,6 @@ test = [
 pythonpath = [
     "."
 ]
+
+[tool.hatch.version]
+path = "mrkdwnify/__init__.py"
