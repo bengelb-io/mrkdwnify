@@ -9,13 +9,17 @@ on:
       type: choice
       options:
       - pip-latest
+      - pip-staging
 
 
 jobs:
-  environment: pip-latest
   deploy:
+    environment: ${{ github.event.inputs.environment }}
     runs-on: ubuntu-latest
     steps:
+    - name: Announce
+      run: echo "Deploying to ${{ github.event.inputs.environment }}"
+  
     - uses: actions/checkout@v4
     
     - name: Set up Python
