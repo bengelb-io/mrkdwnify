@@ -12,6 +12,7 @@ on:
 
 
 jobs:
+  environment: pip-latest
   deploy:
     runs-on: ubuntu-latest
     steps:
