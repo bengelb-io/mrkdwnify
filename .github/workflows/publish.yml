@@ -1,8 +1,15 @@
 name: Publish to PyPI
 
 on:
-  release:
-    types: [created]
+  workflow_dispatch:
+    environment:
+      description: 'Environment to deploy to'
+      required: true
+      default: 'pip-latest'
+      type: choice
+      options:
+      - pip-latest
+
 
 jobs:
   deploy:
