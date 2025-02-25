@@ -33,6 +33,7 @@ It overrides several methods from the original library and passes option presets
 
 Javascript Version:
 ```<li><input type="checkbox" checked>item</li>``` => ☑︎ item
+
 Python Version: 
 ```<li><input type="checkbox" checked="true">item</li>``` => ☑︎ item
 
