@@ -32,9 +32,9 @@ It overrides several methods from the original library and passes option presets
 2. For "checked" attributes in input tags you need to provide a "true" value
 
 Javascript Version:
-```<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" checked >item</li>``` => ☑︎ item
+```<li><input type="checkbox" checked>item</li>``` => ☑︎ item
 Python Version: 
-```<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" checked="true">item</li>``` => ☑︎ item
+```<li><input type="checkbox" checked="true">item</li>``` => ☑︎ item
 
 Other than that the implementation should be the same.
 
