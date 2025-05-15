@@ -1,5 +1,5 @@
 # mrkdwnify
-mrkdwnify is an adaptation of the javascript [html-to-mrkdwn](https://github.com/integrations/html-to-mrkdwn) library built upon the existing [python-markdownify](https://github.com/matthewwithanm/python-markdownify) library.
+mrkdwnify is an adaptation of the javascript [html-to-mrkdwn](https://github.com/integrations/html-to-mrkdwn) library forked from the existing [python-markdownify](https://github.com/matthewwithanm/python-markdownify) library.
 
 # Installation 
 ```bash
