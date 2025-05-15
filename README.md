@@ -12,10 +12,10 @@ pip install mrkdwnify
 from mrkdwnify import mrkdwnify
 
 html = "<h1>Hello this is a mrkdwn header!</h1>"
-mrkdwn = mrkdwnify(html) # *Hello this is a mrkdwn header!*
+mrkdwn = mrkdwnify(html) # '*Hello this is a mrkdwn header!*'
 
 html = '<p>Hello this is an inline link! <a href="https://www.example.com">Example</a></p>'
-mrkdwn = mrkdwnify(html) # Hello this is an inline link! <https://www.example.com|Example>
+mrkdwn = mrkdwnify(html) # 'Hello this is an inline link! <https://www.example.com|Example>'
 ```
 
 ## For Tinkerers
